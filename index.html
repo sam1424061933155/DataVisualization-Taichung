@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>D3 World Map</title>
+    
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script type="text/javascript" src="queue.js"></script>
+    <script type="text/javascript" src="d3.js"></script>
+    <script type="text/javascript" src="d3.slider.js"></script>
+    <link type="text/css" rel= "stylesheet" href="d3.slider.css" />
+    <script type="text/javascript" src="d3-legend.js"></script>
+    <style>
+    .content{
+      display: inline-block;
+    }
+    #date_info{
+      position:absolute;
+      top: 20px;
+      left:35px;
+    }
+    .map{
+      margin-left:315px;
+      margin-top:45px;
+    }
+   
+    #slider-start,#slider-end{
+      width:870px;
+      margin-left:35px;
+    }
+    .start,.end{
+      margin-left:35px;
+    }
+    .legend{
+      margin-top: 240px
+    }
+    .date{
+      margin-bottom: 0px;
+    }
+    #text-start-line,#text-end-line{
+      height:0px;
+    }
+    
+    </style>
+
+    
+    
+    
+
+    
+    
+
+
+
+
+  </head>
+  <body>
+  
+    <script type="text/javascript" src="main.js"></script>
+    
+    <!--
+    <div style="margin-left: 10px">
+      <p style="position : fixed">
+        9月<span id="text-start" >1</span> 號至 9月
+        <span id="text-end">30</span> 號車禍率<spn id="text-busy"> 非尖峰</spn>
+      </p>
+    </div>
+
+    <h2 style="text-align:center">目前為9月<span class="date_title" >1</span>號</h2>
+    -->
+    <div class="main">
+      <div class="content">
+        <div id="date_info" >
+          <h1 >From</h1>
+          <h3 class="date">2016-10-<span id="text-start">1</span></h3>
+          <div id="text-start-line"></div>
+          <h4>To</h4> 
+          <h3 class="date">2016-10-<span id="text-end">31</span></h3>
+          <div id="text-end-line"></div>
+          <div class="legend"></div>
+        </div>
+      </div>
+       
+      <div class="content">  
+        <div class="map"></div>
+      </div>
+    </div>
+
+   
+    </span><button type="button" id="busy_button" onclick="choosebusy()">尖峰</button>
+    <div></div>
+    <button type="button" id="nobusy_button" onclick="choosenotbusy()">非尖峰</button>
+    
+
+
+   
+    <h2 class=start>Start Date</h2>
+    <div id="slider-start" ></div>
+    <h2 class=end>End Date</h2>
+    <div id="slider-end"></div>
+
+
+</script>
+
+    <!--
+    <svg id="tip" style="width: 800px,height:800px "></svg>-->
+
+  </body>
+</html>
